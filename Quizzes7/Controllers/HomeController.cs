@@ -40,10 +40,18 @@ namespace Quizzes7.Controllers
         /// <returns>Homepage view.</returns>
         public ActionResult Homepage()
         {
-            // Checking if the user is logged in.
-            if (loginHelper.checkLogin((getCookieArray())[0], Session["AuthID"].ToString()))
+            if (Session["AuthId"] != null)
             {
-                return View();
+                // Checking if the user is logged in.
+                if (loginHelper.checkLogin((getCookieArray())[0], Session["AuthId"].ToString()))
+                {
+                    return View();
+                }
+                else
+                {
+                    TempData["Message"] = messageHelper.getMessage(1);
+                    return RedirectToAction("Index");
+                }
             }
             else
             {
@@ -58,10 +66,18 @@ namespace Quizzes7.Controllers
         /// <returns>A string array.</returns>
         public string[] getCookieArray()
         {
-            // Splitting the cookie into an array.
-            string[] cookieArray = Request.Cookies["AuthID"].Value.ToString().Split(new string[] { " " }, StringSplitOptions.None);
+            if (Request.Cookies["AuthId"] != null)
+            {
+                // Splitting the cookie into an array.
+                string[] cookieArray = Request.Cookies["AuthId"].Value.ToString().Split(new string[] { " " }, StringSplitOptions.None);
 
-            return cookieArray;
+                return cookieArray;
+            }
+            else
+            {
+                string[] cookieArray = {"a", "1", "1"};
+                return cookieArray;
+            }
         }
     }
 }

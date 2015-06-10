@@ -81,5 +81,16 @@ namespace Quizzes7.Controllers
 
             return RedirectToAction("Homepage", "Home");
         }
+
+        public ActionResult Logout()
+        {
+            if (Request.Cookies["AuthId"] != null)
+            {
+                var cookie = new HttpCookie("AuthId");
+                cookie.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(cookie);
+            }
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

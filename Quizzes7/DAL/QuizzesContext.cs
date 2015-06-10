@@ -20,6 +20,10 @@ namespace Quizzes7.DAL
 
         public DbSet<User> user { get; set; }
         public DbSet<Role> role { get; set; }
+        public DbSet<FAQ> faq { get; set; }
+        public DbSet<Course> course { get; set; }
+        public DbSet<Cluster> cluster { get; set; }
+        public DbSet<Unit> unit { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

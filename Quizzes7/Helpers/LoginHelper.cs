@@ -11,6 +11,8 @@ namespace Quizzes7.Helpers
         /// <summary>
         /// Checks if the user is logged in.
         /// </summary>
+        /// <param name="hash">The hash to be checked.</param>
+        /// <param name="authId">The current session hash to be checked.</param>
         /// <returns>Returns true if the user has been validated, false if not.</returns>
         public bool checkLogin(string hash, string authId)
         {
@@ -32,9 +34,11 @@ namespace Quizzes7.Helpers
                 return false;
             }
         }
+
         /// <summary>
         /// Checks if the user is an administrator.
         /// </summary>
+        /// <param name="role">The role to be checked.</param>
         /// <returns>Returns true if the account matches the type, false if a lecturer is detected.</returns>
         public bool checkAccount(string role)
         {
@@ -57,6 +61,11 @@ namespace Quizzes7.Helpers
             }
         }
 
+        /// <summary>
+        /// Parses the user id from a string to an int.
+        /// </summary>
+        /// <param name="id">The user id.</param>
+        /// <returns>The user id as an integer.</returns>
         public int getUserId(string id)
         {
             // Checking for errors.

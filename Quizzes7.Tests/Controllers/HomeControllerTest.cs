@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Quizzes7;
 using Quizzes7.Controllers;
+using Quizzes7.DAL;
 
 namespace Quizzes7.Tests.Controllers
 {
