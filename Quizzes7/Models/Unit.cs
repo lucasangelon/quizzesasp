@@ -13,5 +13,6 @@ namespace Quizzes7.Models
 
         public virtual ICollection<Cluster> clusters { get; set; }
         public virtual ICollection<User> users { get; set; }
+        public virtual ICollection<Quiz> quizzes { get; set; }
     }
 }
