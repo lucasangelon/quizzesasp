@@ -1,0 +1,75 @@
+﻿@model Quizzes7.ViewModels.UserUnitIndexData
+
+@{
+    ViewBag.Title = "Lecturers";
+}
+
+<h2>Lecturers</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Lecturer</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.lecturers)
+    {
+        string selectedRow = "";
+        if (item.id == ViewBag.StudentID)
+        {
+            selectedRow = "success";
+        }
+        <tr class="@selectedRow">
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fullName)
+            </td>
+            <td>
+                @{
+        foreach (var unit in item.units)
+        {
+            @unit.id @:  @unit.name <br />
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Select", "Index", new { id = item.id }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+            </td>
+        </tr>
+    }
+
+</table>
+
+@if (Model.units != null)
+{
+    <h3>Units the lecturer is linked to</h3>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+
+        @foreach (var item in Model.units)
+        {
+            string selectedRow = "";
+            if (item.id == ViewBag.id)
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @item.id
+                </td>
+                <td>
+                    @item.name
+                </td>
+            </tr>
+        }
+
+    </table>
+}

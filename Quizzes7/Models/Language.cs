@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Quizzes7.Models
 {
-    public class Unit
+    public class Language
     {
         public int id { get; set; }
         public string name { get; set; }
-
-        public virtual ICollection<Cluster> clusters { get; set; }
-        public virtual ICollection<User> users { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Quizzes7.Models.Role>
+﻿@model IEnumerable<Quizzes7.Models.FAQ>
 
 @{
     ViewBag.Title = "Home Page";
@@ -35,7 +35,7 @@
 <table class="table">
     <tr>
         <th>
-            <p>Roles</p>
+            <p>Frequently Asked Questions</p>
         </th>
     </tr>
 
@@ -43,10 +43,10 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.name)
+                @Html.DisplayFor(modelItem => item.question)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.id)
+                @Html.DisplayFor(modelItem => item.answer)
             </td>
         </tr>
     }

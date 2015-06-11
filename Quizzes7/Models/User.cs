@@ -27,9 +27,15 @@ namespace Quizzes7.Models
         [Display(Name = "Role ID")]
         public int role_id { get; set; }
 
-        public string fullName()
+        public virtual ICollection<Unit> units { get; set; }
+
+        [Display(Name = "Full Name")]
+        public string fullName
         {
-            return first_name + " " + last_name;
+            get
+            {
+                return first_name + " " + last_name;
+            }
         }
     }
 }

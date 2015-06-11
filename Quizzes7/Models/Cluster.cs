@@ -10,5 +10,8 @@ namespace Quizzes7.Models
     {
         public int id { get; set; }
         public string name { get; set; }
+
+        public virtual ICollection<Course> courses { get; set; }
+        public virtual ICollection<Unit> units { get; set; }
     }
 }

@@ -77,7 +77,7 @@ namespace Quizzes7.Controllers
             Response.Cookies.Add(cookie);
 
             // Set a welcome message to the user.
-            TempData["Message"] = messageHelper.getMessage(4, currentUser.fullName());
+            TempData["Message"] = messageHelper.getMessage(4, currentUser.fullName);
 
             return RedirectToAction("Homepage", "Home");
         }

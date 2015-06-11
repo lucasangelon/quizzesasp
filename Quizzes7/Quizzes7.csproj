@@ -126,12 +126,18 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ClusterController.cs" />
+    <Compile Include="Controllers\ClusterUnitController.cs" />
+    <Compile Include="Controllers\CourseClusterController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SpecificController.cs" />
+    <Compile Include="Controllers\TypeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\UnitController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\UserUnitController.cs" />
     <Compile Include="DAL\QuizzesContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -142,10 +148,23 @@
     <Compile Include="Models\Cluster.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\FAQ.cs" />
+    <Compile Include="Models\Language.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\QuestionExtra.cs" />
+    <Compile Include="Models\Quiz.cs" />
     <Compile Include="Models\Role.cs" />
+    <Compile Include="Models\Specific.cs" />
+    <Compile Include="Models\Type.cs" />
     <Compile Include="Models\Unit.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserQuiz.cs" />
+    <Compile Include="Models\UserQuizAnswer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\AssignedClustersData.cs" />
+    <Compile Include="ViewModels\AssignedUnitsData.cs" />
+    <Compile Include="ViewModels\ClusterUnitIndexData.cs" />
+    <Compile Include="ViewModels\CourseClusterIndexData.cs" />
+    <Compile Include="ViewModels\UserUnitIndexData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -208,6 +227,34 @@
     <Content Include="Views\Unit\Details.cshtml" />
     <Content Include="Views\Unit\Edit.cshtml" />
     <Content Include="Views\Unit\Index.cshtml" />
+    <Content Include="Views\CourseCluster\Create.cshtml" />
+    <Content Include="Views\CourseCluster\Index.cshtml" />
+    <Content Include="Views\CourseCluster\Edit.cshtml" />
+    <Content Include="Views\CourseCluster\Delete.cshtml" />
+    <Content Include="Views\CourseCluster\Details.cshtml" />
+    <Content Include="Views\ClusterUnit\Create.cshtml" />
+    <Content Include="Views\ClusterUnit\Delete.cshtml" />
+    <Content Include="Views\ClusterUnit\Details.cshtml" />
+    <Content Include="Views\ClusterUnit\Edit.cshtml" />
+    <Content Include="Views\ClusterUnit\Index.cshtml" />
+    <Content Include="Views\UserUnit\IndexLecturer.cshtml" />
+    <Content Include="Views\UserUnit\Edit.cshtml" />
+    <Content Include="Views\UserUnit\IndexStudent.cshtml" />
+    <Content Include="Views\Language\Create.cshtml" />
+    <Content Include="Views\Language\Delete.cshtml" />
+    <Content Include="Views\Language\Details.cshtml" />
+    <Content Include="Views\Language\Edit.cshtml" />
+    <Content Include="Views\Language\Index.cshtml" />
+    <Content Include="Views\Type\Create.cshtml" />
+    <Content Include="Views\Type\Delete.cshtml" />
+    <Content Include="Views\Type\Details.cshtml" />
+    <Content Include="Views\Type\Edit.cshtml" />
+    <Content Include="Views\Type\Index.cshtml" />
+    <Content Include="Views\Specific\Create.cshtml" />
+    <Content Include="Views\Specific\Delete.cshtml" />
+    <Content Include="Views\Specific\Details.cshtml" />
+    <Content Include="Views\Specific\Edit.cshtml" />
+    <Content Include="Views\Specific\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

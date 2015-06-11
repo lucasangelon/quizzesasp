@@ -16,8 +16,7 @@ namespace Quizzes7.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Message = databaseContext.role.Find(1);
-            return View(databaseContext.role.ToList());
+            return View(databaseContext.faq.ToList());
         }
 
         public ActionResult About()
